@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>С 8 Марта, мама!</title>
+
+  <style>
+    body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff8fb8,#ffd6ec,#ffc0cb);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+color:white;
+}
+
+.card{
+background:rgba(255,255,255,0.2);
+padding:80px;
+border-radius:40px;
+width:850px;
+backdrop-filter:blur(15px);
+box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+h1{font-size:70px;}
+
+p{
+font-size:24px;
+line-height:1.8;
+}
+
+.fall{
+position:absolute;
+font-size:25px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px)}
+100%{transform:translateY(110vh)}
+}
+  </style>
+
+  
+</head>
+<body>
+  <div class="card">
+
+<h1>💐 Мама Арофат, с 8 Марта!</h1>
+
+<p>
+Мамочка, поздравляю тебя с прекрасным весенним праздником!  
+Спасибо тебе за твою заботу, поддержку и бесконечную любовь.  
+
+Ты самый важный человек в моей жизни, и я очень благодарен за всё, что ты для меня делаешь.  
+Желаю тебе крепкого здоровья, счастья, спокойствия и много радостных моментов.  
+
+Пусть каждый день приносит тебе улыбки, тепло и хорошее настроение.  
+Пусть в твоей жизни всегда будет весна, любовь и свет!
+</p>
+
+</div>
+
+  <script>
+    for(let i=0;i<40;i++){
+let el=document.createElement("div")
+el.className="fall"
+el.innerHTML=Math.random()>0.5?"🌸":"💖"
+el.style.left=Math.random()*100+"vw"
+el.style.animationDuration=(5+Math.random()*6)+"s"
+document.body.appendChild(el)
+}
+  </script>
+</body>
+</html>
